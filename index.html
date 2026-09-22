@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Enzo VR</title>
+<script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script> 
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+</head>
+<!-- This is the main body of the website- ALL your content goes AFTER the <body> tag and before the </body> tag -->
+<body>
+<!-- environment -->
+<a-scene>
+    <!--Assets-->
+    <a-assets>
+        <img id="floor" src="images/floor.jpg" title="image by misku from Pixabay" preload="auto">
+        <img id="wall" src="images/wall.jpg" title="image by Michael Laut from Pixabay" preload="auto">
+        <img id="roof" src="images/roof.jpg" title="image by mac231 from Pixabay" preload="auto">
+        <img id="tower" src="images/tower.png" title="tower" preload="auto">
+        <img id="basil" src="images/basil.jpg" title="image by ulleo from Pixabay" preload="auto">
+        <img id="panel" src="images/panel.png" title="panel" preload="auto">
+        <img id="rail" src="images/railing.png" title="rail" preload="auto">
+        <img id="car" src="images/car.jpg" title="image by huntlh from Pixabay" preload="auto">
+        <img id="box" src="images/box.jpg" title="image by PIRO4D from Pixabay" preload="auto">
+
+
+    </a-assets>
+    <a-entity environment="preset:starry;dressingAmount:0;skyColor:black;dressingColor:black;gridColor:#floor;"></a-entity>
+    <!--Museum Start-->
+        <a-box id="floor" position="0 0 0" scale="10 0.1 10" src="#floor" height="0.1"></a-box>
+        <a-box id="wall1" position="0 1.473 4.907" rotation="0 0 0" scale="10 3 0.2" src="#wall"></a-box>
+        <a-box id="wall2" position="0 1.473 -4.907" rotation="0 0 0" scale="10 3 0.2" src="#wall"></a-box>
+        <a-box id="wall3" position="5.049 1.454 -0.008" rotation="0 -90 0" scale="10 3 0.2" src="#wall"></a-box>
+        <a-box id="wall4" position="-5.049 1.454 -0.008" rotation="0 -90 0" scale="10 3 0.2" src="#wall"></a-box>
+        <!--Roof-->
+        <a-cylinder id="triangle_front" segments-radial="3" position="0 3.874 4.907" rotation="-90 0 0" scale="5.774 0.2 1.8" src="#wall"></a-cylinder>
+        <a-cylinder id="triangle_back" segments-radial="3" position="0 3.874 -4.907" rotation="-90 0 0" scale="5.774 0.2 1.8" src="#wall"></a-cylinder>
+        <a-box id="roof_right" position="2.580 4.328 0" rotation="28.433 90 0" scale="10.931 0.20 6.110" src="#roof"></a-box>
+        <a-box id="roof_left" position="-2.599 4.321 -0.017" rotation="28.433 -90 0" scale="10.931 0.20 6.130" src="#roof"></a-box>
+        <a-box id="img1" position="-4.9 1.5 0" rotation="0 -90 0" scale="2 1 0.1" src="#basil"></a-box>
+        <a-box id="img2" position="4.9 1.5 0" rotation="0 -90 0" scale="2 1 0.1" src="#car"></a-box>
+
+
+<!--Town-->
+ 
+<!--Buildings-->
+ 
+  <a-box id="wall4" position="80 25 0" scale="15 50 15" src="#tower"></a-box>
+    <a-box id="wall4" position="-13 25 31" scale="15 50 15" src="#tower"></a-box>
+  <a-box id="wall4" position="80 25 0" scale="15 50 15" src="#tower"></a-box>
+ <a-box id="wall4" position="16 25 0" scale="15 50 15" src="#tower"></a-box>
+ <a-box id="wall4" position="-15 25 0" scale="15 50 15" src="#tower"></a-box>
+ <a-box id="wall5" position="80 25 70" scale="15 50 15" src="#tower"></a-box>
+ <a-gltf-model src="#car-model" position="0 10 5" scale="50 50 50" rotation="0 0 0"></a-gltf-model>
+ <a-box id="wall5" position="100 25 0" scale="15 40 15" src="#tower"></a-box>
+ <a-box id="wall5" position="0 0 13.4" scale="1 2 1"  rotation="0 20 0"   src="#box"></a-box>
+
+<!--elevated rail-->
+ 
+ <a-box id="wall6" position="10 10 17" scale="200 2 10" color="black" ></a-box>
+ <a-cylinder id="pole" position="0 4.452 22.972" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-cylinder id="pole1" position="0 4.452 10.890" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-cylinder id="pole2" position="0 4.452 10.890" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-cylinder id="pole3" position="20 4.452 10.890" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-cylinder id="pole4" position="20 4.452 22.972" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-cylinder id="pole5" position="40 4.452 22.972" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-cylinder id="pole6" position="40 4.452 10.890" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-cylinder id="pole7" position="60 4.452 22.972" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-cylinder id="pole8" position="60 4.452 10.890" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-cylinder id="pole7" position="80 4.452 22.972" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-cylinder id="pole8" position="80 4.452 10.890" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-cylinder id="pole7" position="100 4.452 22.972" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-cylinder id="pole8" position="100 4.452 10.890" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-cylinder id="pole7" position="-20 4.452 22.972" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-cylinder id="pole8" position="-20 4.452 10.890" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-cylinder id="pole7" position="-40 4.452 22.972" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-cylinder id="pole8" position="-40 4.452 10.890" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-cylinder id="pole7" position="-60 4.452 22.972" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-cylinder id="pole8" position="-60 4.452 10.890" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-cylinder id="pole7" position="-80 4.452 22.972" scale="0.7 13.2 0.7" src="#panel"></a-cylinder> 
+ <a-cylinder id="pole8" position="-80 4.452 10.890" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-cylinder id="pole7" position="-100 4.452 22.972" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-cylinder id="pole8" position="-100 4.452 10.890" scale="0.7 13.2 0.7" src="#panel"></a-cylinder>
+ <a-box id="wall5" position="0 8 17" scale="0.2 4 11.7" src="#rail"></a-box>
+ <a-box id="wall5" position="20 8 17" scale="0.2 4 11.7" src="#rail"></a-box>
+ <a-box id="wall5" position="40 8 17" scale="0.2 4 11.7" src="#rail"></a-box>
+ <a-box id="wall5" position="60 8 17" scale="0.2 4 11.7" src="#rail"></a-box>
+ <a-box id="wall5" position="80 8 17" scale="0.2 4 11.7" src="#rail"></a-box>
+ <a-box id="wall5" position="100 8 17" scale="0.2 4 11.7" src="#rail"></a-box>
+ <a-box id="wall5" position="-20 8 16" scale="0.2 4 11.5" src="#rail"></a-box>
+ <a-box id="wall5" position="-40 8 16" scale="0.2 4 11.5" src="#rail"></a-box>
+ <a-box id="wall5" position="-60 8 16" scale="0.2 4 11.5" src="#rail"></a-box>
+ <a-box id="wall5" position="-80 8 16" scale="0.2 4 11.5" src="#rail"></a-box>
+ <a-box id="wall5" position="-100 8 16" scale="0.2 4 11.5" src="#rail"></a-box>
+
+
+
+
+</a-scene>
+
+
+
+</body>
+</html>
